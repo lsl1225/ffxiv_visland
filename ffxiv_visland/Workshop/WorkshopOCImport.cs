@@ -28,12 +28,12 @@ public unsafe class WorkshopOCImport
   private List<Func<bool>> _pendingActions = [];
   private bool IgnoreFourthWorkshop;
 
-  public WorkshopOCImport()
-  {
-    _config = Service.Config.Get<WorkshopConfig>();
-    _craftSheet = Service.DataManager.GetExcelSheet<MJICraftworksObject>()!;
-    _botNames = _craftSheet.Select(r => OfficialNameToBotName(Translate.TranslateToEnglish(r.Item.GetDifferentLanguage(ClientLanguage.ChineseSimplified).Value?.Name.RawString) ?? "")).ToList();
-  }
+    public WorkshopOCImport()
+    {
+        _config = Service.Config.Get<WorkshopConfig>();
+        _craftSheet = Service.DataManager.GetExcelSheet<MJICraftworksObject>()!;
+        _botNames = _craftSheet.Select(r => OfficialNameToBotName(r.Item.GetDifferentLanguage(ClientLanguage.English).Value?.Name.RawString ?? Translate.TranslateToEnglish(r.Item.Value?.Name.RawString) ?? "")).ToList();
+    }
 
   public void Update()
   {
