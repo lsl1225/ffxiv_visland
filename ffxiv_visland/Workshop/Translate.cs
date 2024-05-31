@@ -83,7 +83,7 @@ namespace visland.Workshop
        new("海岛翠银环刃","Island Durium Tathlums"),
        new("开拓工房金发饰","Isleworks Gold Hairpin"),
        new("开拓者水晶像","Mammet of the Cycle Award"),
-       new("海岛水果潘趣酒","Isleworks Fruit Punch"),
+       new("海岛水果捞","Isleworks Fruit Punch"),
        new("海岛甜新薯挞","Isleworks Sweet Popoto Pie"),
        new("海岛风味拌细面","Isleworks Peperoncino"),
        new("海岛水牛豆沙拉","Isleworks Buffalo Bean Salad"),
